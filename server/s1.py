@@ -9,7 +9,9 @@ app = Flask(__name__)
 CORS(app)
 
 
-client = MongoClient("mongodb://3.128.28.97:27017/", username="carlos", password="1234")
+client = MongoClient(
+    "mongodb://3.138.247.138:27017/", username="carlos", password="1234"
+)
 db = client["dbSemi"]
 
 
@@ -40,4 +42,4 @@ def addsms():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=5000)
