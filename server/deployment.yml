@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: server-container
-          image: gcr.io/sopes201700314/server:1.0
+          image: gcr.io/sonorous-summer-295803/final:1.0
           ports:
             - containerPort: 5000

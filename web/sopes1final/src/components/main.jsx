@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const LinkServidor = "";
+const LinkServidor = "http://34.122.72.236:5000/addmensaje";
 
 class Ventana extends Component {
   state = {
