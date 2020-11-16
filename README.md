@@ -53,11 +53,3 @@ asi mismo existen otros comandos que nos pueden servir para verificar que todas 
 > - ver pods -> `kubect get pods`
 > - ver deployments -> `kubectl get deployments`
 > - ver servicios -> `kubectl get services`
-
-### ip pagina web
-
-`35.224.33.237`
-
-### ip servidor web
-
-`http://34.122.72.236:5000/`
