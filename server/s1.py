@@ -10,7 +10,7 @@ CORS(app)
 
 
 client = MongoClient(
-    "mongodb://3.138.247.138:27017/", username="carlos", password="1234"
+    "mongodb://34.68.31.181:27017/", username="carlos", password="1234"
 )
 db = client["dbSemi"]
 
@@ -27,6 +27,21 @@ def addsms():
 
     db["mensajes"].insert_one(item_doc)
 
+    _items = db["mensajes"].find()
+    datos = [item for item in _items]
+
+    m = []
+    for d in datos:
+        m.append(d["texto"])
+
+    respuesta = {}
+    respuesta["estado"] = "ok"
+    respuesta["mensajes"] = m
+
+    return json.dumps(respuesta)
+
+@app.route("/getmensajes", methods=["GET"])
+def get_mensajes():
     _items = db["mensajes"].find()
     datos = [item for item in _items]
 
